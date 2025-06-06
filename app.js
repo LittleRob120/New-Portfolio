@@ -1,10 +1,28 @@
+const apiRouter = require('./db') 
 const express = require('express');
-const app = express();
 const path = require('path');
+const mysql2 = require('mysql2');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.json());
+app.use('/portfolio', apiRouter)
+const port = 3000
+
+const db = mysql2.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'fatec',
+    database: 'Portfolio'
+});
+
+db.connect(err => {
+    if (err) throw err;
+    console.log('Conectado ao banco de dados MySQL')
+});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
@@ -29,5 +47,4 @@ app.get('/', (req, res) => {
     res.render('index', { dados });
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
