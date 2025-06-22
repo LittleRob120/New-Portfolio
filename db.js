@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('./database'); // Usa a conexão centralizada
+const db = require('./database'); 
 
 function handleQuery(res, err, results, successMessage = null) {
     if (err) return res.status(500).json({ erro: err.message || err });

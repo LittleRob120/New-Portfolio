@@ -7,19 +7,19 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 app.use('/portfolio', apiRouter)
-const port = 3000
+const port = process.env.PORT || 3000;
 
-const db = mysql2.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'fatec',
-    database: 'Portfolio'
-});
+// const db = mysql2.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'fatec',
+//     database: 'Portfolio'
+// });
 
-db.connect(err => {
-    if (err) throw err;
-    console.log('Conectado ao banco de dados MySQL')
-});
+// db.connect(err => {
+//     if (err) throw err;
+//     console.log('Conectado ao banco de dados MySQL')
+// });
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
