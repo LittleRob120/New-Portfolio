@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1750632896413",
+    "linguagens": [
+      "Python",
+      "SQL",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Typescript",
+      "C",
+      "AAAAAA"
+    ],
+    "framework": [
+      "Flask",
+      "React",
+      "Node.js"
+    ],
+    "ferramentas": [
+      "Git",
+      "MySQL",
+      "VSCode Studio"
+    ]
+  },
+  {
+    "id": "1750633004488",
+    "linguagens": [
+      "Python",
+      "SQL",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Typescript",
+      "C"
+    ],
+    "framework": [
+      "Flask",
+      "React",
+      "Node.js"
+    ],
+    "ferramentas": [
+      "Git",
+      "MySQL",
+      "VSCode Studio"
+    ]
+  }
+]
